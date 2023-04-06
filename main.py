@@ -162,10 +162,6 @@ class MainWindow(QWidget):
                 QMessageBox.about(self, '경고', '지정된 Target이 없습니다.')
 
     def start_spoofing(self):
-        target_ip = '192.168.0.42'
-        target_mac = 'c8:09:a8:1b:e4:a0'
-        gateway_mac = '64:e5:99:64:11:a8'
-        gateway_ip = '192.168.0.1'
         def target_arp_cache_poisoning():
 
             arp = ARP(op=2, hwsrc=get_my_mac(), psrc=gateway_ip, hwdst=target_mac, pdst=target_ip)
